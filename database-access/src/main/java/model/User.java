@@ -16,16 +16,16 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int userId;
-    private String fullName;
+    private String username;
 
     public User(){}
-    public User(String fullName ){
-        this.fullName =fullName;
+    public User(String username ){
+        this.username =username;
     }
 
     @Override
     public String toString() {
-        return "*||" + userId + ". " + "Username: " + fullName;
+        return "*||" + userId + ". " + "Username: " + username;
     }
 
 }

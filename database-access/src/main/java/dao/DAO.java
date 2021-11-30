@@ -13,7 +13,7 @@ public class DAO {
     protected static void addUser(String fullName) {
         EntityManager em = emf.createEntityManager();
         User user = new User(fullName);
-        System.out.println("*| "+ user.getFullName() + " is saved |*");
+        System.out.println("*| "+ user.getUsername() + " is saved |*");
         em.getTransaction().begin();
         em.persist(user);
         em.getTransaction().commit();

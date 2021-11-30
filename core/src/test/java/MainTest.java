@@ -11,7 +11,7 @@ class MainTest {
 
         @SneakyThrows
         @Test
-        public void whenUsingJava7_thenSuccess() {
+        public void checkMimeType() {
             Path path = new File("doggee.jpg").toPath();
             String mimeType = Files.probeContentType(path);
 
