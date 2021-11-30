@@ -10,9 +10,9 @@ import java.util.List;
 public class DAO {
     static EntityManagerFactory emf = Persistence.createEntityManagerFactory("PU");
 
-    protected static void addUser(String fullName) {
+    protected static void addUser(String username) {
         EntityManager em = emf.createEntityManager();
-        User user = new User(fullName);
+        User user = new User(username);
         System.out.println("*| "+ user.getUsername() + " is saved |*");
         em.getTransaction().begin();
         em.persist(user);
